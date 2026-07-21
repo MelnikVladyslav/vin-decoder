@@ -35,8 +35,8 @@ export const HistoryProvider: React.FC<{ children: ReactNode }> = ({ children })
     });
   };
 
-  const loadFromHistory = (item: HistoryItem) => {
-    // Можна додати логіку, якщо треба
+  const loadFromHistory = (_item: HistoryItem) => {
+    // Можна додати логіку пізніше, якщо треба
   };
 
   return (
