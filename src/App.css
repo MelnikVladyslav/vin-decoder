@@ -1,0 +1,240 @@
+/* Minimalistic styles for VIN Decoder */
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin: 0;
+  color: #1a1a1a;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.home, .variables, .variable-detail {
+  padding: 20px;
+}
+
+.vin-form {
+  margin-bottom: 40px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.vin-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.vin-input:focus {
+  border-color: #0066cc;
+}
+
+.decode-btn {
+  padding: 12px 24px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.decode-btn:hover {
+  background-color: #0052a3;
+}
+
+.decode-btn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #d32f2f;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.api-message {
+  color: #1976d2;
+  margin-top: 10px;
+}
+
+.history {
+  margin-bottom: 40px;
+}
+
+.history h3 {
+  margin-bottom: 15px;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.history-btn {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.history-btn:hover {
+  background: #e0e0e0;
+  border-color: #0066cc;
+}
+
+.results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.results th, .results td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.results th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.results tr:hover {
+  background-color: #f5f5f5;
+}
+
+.variables-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.variable-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.variable-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.variable-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.variable-link h3 {
+  margin: 0 0 10px 0;
+  color: #0066cc;
+}
+
+.id {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.detail-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+  
+  header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .variables-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* HTML descriptions from API */
+.description-html {
+  margin: 12px 0;
+  line-height: 1.6;
+  color: #444;
+}
+
+.description-html p {
+  margin-bottom: 12px;
+}
+
+.description-html ul {
+  padding-left: 22px;
+  margin: 10px 0;
+}
+
+.description-html li {
+  margin-bottom: 6px;
+}
+
