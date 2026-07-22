@@ -13,7 +13,7 @@ A React-based Single Page Application for decoding Vehicle Identification Number
 
 ## Live Demo
 
-[Deployed on Vercel/Netlify - replace with your link]
+[Deployed on Vercel: https://vin-decoder-omega.vercel.app/]
 
 ## Local Setup
 
